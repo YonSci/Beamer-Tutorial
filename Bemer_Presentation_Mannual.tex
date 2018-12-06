@@ -1,0 +1,1701 @@
+\documentclass[10pt,xcolor=x11names]{beamer}
+
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{multimedia}
+\usepackage{fancybox}
+\usepackage{pgfpages}
+\usepackage[bars]{beamerthemetree}
+\usepackage{pgf}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage{dirtytalk}
+\usepackage{csquotes}
+\usepackage{epigraph}
+\usepackage{quotchap}
+
+
+\setbeameroption{show notes}
+%\setbeameroption{show notes on second screen=right}
+
+%\pgfpagesuselayout{4 on 1}[a4paper, border shrink=5mm, landscape]
+
+%\usetheme{default} 
+%\usetheme{Warsaw}
+%\usetheme{Berkeley}
+%\usetheme{CambridgeUS}
+\usetheme{Antibes}
+%\usetheme{Marburg}
+%\usetheme{Berlin}
+%\usetheme{Szeged}
+%\usetheme{Malmoe}
+%\usetheme{metropolis}
+%\usetheme{Singapore}
+%\usetheme{AnnArbor}
+%\usetheme{Bergen}
+%\usetheme{Boadilla}
+%\usetheme{boxes}
+%\usetheme{Copenhagen}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{Szeged}
+%\usetheme{Rochester}
+%\usetheme{PaloAlto}
+%\usetheme{Marburg}
+%\usetheme{Malmoe}
+%\usetheme{Madrid}
+%\usetheme{Luebeck}
+%\usetheme{JuanLesPins}
+%\usetheme{Darmstadt}
+%\usetheme{Rochester}
+%\usetheme{Pittsburgh}
+%\usetheme{Montpellier}
+%usetheme{EastLansing}
+
+
+
+%\usefonttheme{default}
+%\usefonttheme{serif}
+%\usefonttheme{structurebold}
+%\usefonttheme{structureitalicserif}
+%\usefonttheme{structuresmallcapsserif}
+\usefonttheme[onlymath]{serif}
+%\usefonttheme[onlysmall]{structurebold}
+
+
+
+% sets addtional font, color to the titel and background 
+
+%\setbeamercolor{title}{fg=blue!95!black,bg=red!20!white}
+\setbeamerfont{title}{shape=\itshape,family=\rmfamily}
+\setbeamercolor{title}{fg=!95!black}
+
+
+%\usecolortheme{beaver}
+%\usecolortheme{albatross}
+%\usecolortheme{beetle}
+\usecolortheme{crane}
+%\usecolortheme{fly}
+%\usecolortheme{seagull}
+%\usecolortheme{whale}
+%\usecolortheme{orchid} 
+%\usecolortheme{dolphin} 
+%\usecolortheme{dove} 
+%\usecolortheme{wolverine}
+%\usecolortheme{lily}
+%\usecolortheme{rose}
+%\usecolortheme{seahorse}
+%\usecolortheme{sidebartab}
+%\usecolortheme{monarca}
+%\usecolortheme{spruce}
+%\usecolortheme{structure}
+
+%\setbeamercolor{background  canvas}{fg=white, bg=white}
+
+%\setbeamercolor{alerted text}{fg=orange}
+\setbeamercolor{background canvas}{bg=white}
+%\definecolor{chocolate}{RGB}{33,33,33}
+
+\setbeamercolor{color1}{fg=white, bg=blue!75}
+\setbeamercolor{color2}{fg=white, bg=brown!75}
+
+%\useoutertheme{default}
+%\useoutertheme{metropolis}
+%\useoutertheme{infolines}
+%\useoutertheme{miniframes}
+%\useoutertheme{smoothbars}
+%\useoutertheme{split}
+%\useoutertheme{shadow}
+%\useoutertheme{smoothtree}
+\useoutertheme{tree}
+%\useoutertheme{sidebar}
+
+
+%\useinnertheme{default}
+\useinnertheme{circles}
+%\useinnertheme{rectangles}
+%\useinnertheme{rounded}
+%\useinnertheme{inmargin}
+
+
+\setbeamercovered{transparent}
+%\setbeamercovered{dynamic}
+%\setbeamercovered{transparent=5}
+
+%\setbeamertemplate{headline}[default]
+
+
+\pgfdeclareimage[height=2cm]{myimage}{EIWR}
+
+\title[Latex Beamer]{Basics of BEAMER Presentation  }
+\subtitle{A Beamer Tutorial}
+\author{Yonas M.}
+\institute[Ethiopian Institute of Water Resources]
+{Ethiopian Institute of Water Resources\\
+Addis Abeba University}
+
+% To add logo in each slide
+%\pgfdeclareimage[height=0.8cm]{logo}{EIWR}
+%\logo{\pgfuseimage{logo}}
+
+
+\date{\today}
+
+% To add logo of the university only on the title page 
+
+\titlegraphic
+{\includegraphics[width=2cm]{Addis_Ababa_University_logo.png}
+\hspace*{6cm}
+\includegraphics[width=2cm]{EIWR.png}
+}
+
+
+\begin{document}
+
+% To add hide logo and also page number on title page		
+%{ \setbeamertemplate{footline}{} \setbeamertemplate{logo}{} \begin{frame} \titlepage \end{frame}}
+
+
+\begin{frame} \maketitle \end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Outline}
+\tableofcontents%[pausesections]
+\end{frame}
+
+%\begin{frame}[t,allowframebreaks]{Outline}
+%\tableofcontents
+%\end{frame}
+
+\section{Introduction}
+
+\begin{frame} {Introduction} \label{intro}
+
+\begin{exampleblock}{ Main Features of Beamer:}
+
+\begin{itemize}
+
+\item It's free to use and the ability to view and modify the source code.
+
+\item The output PDF's are consistent across various operating system.
+
+\item Simple slide navigation tools and it's easier to create reproducible research.
+
+\item Availability of various presentation, color, inner, outer and font theme.
+
+\item A table of contents will automatically be created, complete with clickable links to each section and subsection you created in your presentation.
+
+\item Most of the designs are highly usable and readable. This makes the presentation more professional looking and easier for the audience to follow.
+
+\end{itemize}
+\end{exampleblock}
+\hyperlink{hyper1}{\beamerbutton{Jump to hyperlink}}
+\end{frame}
+
+
+\section{Installation}
+\begin{frame}[allowframebreaks]{Installation}
+There are different ways of installing the Beamer class in your system.\\
+
+If your system is Windows:
+
+\begin{itemize}
+	\item First install the package manager \alert{MiKTeX}:
+	
+	\begin{exampleblock}{Installation of package manager}
+		Go to this link \url{https://miktex.org/download} then download the installer and simply double click the \alert{MiKTeX} installer to install the package manger.
+	\end{exampleblock}
+	
+	\item For Latex editor either you can use \alert{TeXstudio} or \alert{Texmaker}:
+	
+	\begin{exampleblock}{Installation of editor and compiler}
+		Go to the following links:
+		\url{https://www.texstudio.org/} or 
+		\url{http://www.xm1math.net/texmaker/}
+		
+		Simply download the setup that meets your system requirement and install it to your system.
+		
+	\end{exampleblock}
+
+	
+\end{itemize}
+
+If your system is Linux based distribution the installation procedure is straight forward:
+
+\begin{itemize}
+	\item  First install \alert{tex-Live LaTeX} on your system. Open the terminal and type:
+	
+	\begin{exampleblock}{Installation of package manager}
+		sudo apt-get install texlive-full
+	\end{exampleblock}
+	\item For LaTeX editor and compiler installation 
+	
+	\begin{exampleblock}{Installation of editor and compiler}
+		sudo apt install texstudio \\
+		sudo apt-get install texmaker 
+	\end{exampleblock}
+	
+	\alert{ Don't forget your machine is connected to internet }
+\end{itemize}
+
+\end{frame}
+
+\section{Title Page}
+\begin{frame}[fragile]{Adding Title Page} 
+To insert title information on the title page we can use the following command which gives information about Title, Author, Affiliation, Date and Graphic etc. The following general code can be used for title page:
+
+{\footnotesize   \begin{exampleblock}{Sample code for Title page}
+	\begin{verbatim}
+	\title[Latex Beamer]{Latex Beamer Presentation}
+	\subtitle{Beamer Tutorial}
+	\author{Yonas M.}
+	\institute[Ethiopian Institute of Water Resources]
+	{Ethiopian Institute of Water Resources\\
+	Addis Abeba University}
+	\date{\today}
+	\end{verbatim}\end{exampleblock}}
+\begin{alertblock}{Note}
+	We have to add \verb|\maketitle| command after \verb|\begin{document}| section to add the title page.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}[fragile]{Adding Logo on the Title Page}
+
+To add logo on the presentation we can use the following command but the position of the logo will be at lower left of each slide. 
+\begin{exampleblock}{Adding logo in each slide}
+	\begin{verbatim}
+		\pgfdeclareimage[height=0.8cm]{logo}{EIWR}
+	\logo{\pgfuseimage{logo}}
+	\end{verbatim}
+\end{exampleblock}
+
+To add multiple logo's we can use the following command:
+
+{\footnotesize \begin{exampleblock}{Multiple logo's on the Title page}
+\begin{verbatim}
+\titlegraphic
+{
+\includegraphics[width=1.5cm]{logopolito}
+\hspace*{6cm}
+\includegraphics[width=1.5 cm]{EIWR}
+}	
+\end{verbatim}
+\end{exampleblock} }
+
+\end{frame}
+
+\section{Table of Content's}
+
+\begin{frame}[fragile,allowframebreaks] {Table of content's}
+The next code can be used to add a table of contents and it has an individual \alert{Outline}.
+\begin{exampleblock}{Table of content's}
+
+	\begin{verbatim}
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{ frame}
+	\end{verbatim}
+		
+\end{exampleblock}
+
+Sometimes it's important to talk about the first
+section before the second one is shown. we can use the \alert{pausesections} to do that...
+
+\vspace{40pt}
+\begin{exampleblock}{Pausesections}
+	   \begin{verbatim}
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents[pausesections]
+\end{ frame}
+	   \end{verbatim}
+\end{exampleblock}
+
+We can use the option \alert{allowframebreaks} to cause the frame to be split among several slides.
+\vspace{60pt}
+\begin{exampleblock}{Adding continuous outlines}
+	\begin{verbatim}
+\begin{frame}[t,allowframebreaks]{Outline}
+\tableofcontents
+\end{ frame}
+	\end{verbatim}
+\end{exampleblock}
+
+\end{frame}
+
+\section{Sections and Subsections}
+
+\begin{frame}[fragile]{Sections and Subsections}
+
+These command's are given outside of frames. They have
+no direct effect but they are important to create entries in the table of contents.
+
+\begin{exampleblock}{Code for creating section's }
+	\begin{verbatim}
+	\section{Chapter}
+	\subsection{Sub chapter}
+	\subsubsection{Sub sub chapter}
+	\end{verbatim}
+\end{exampleblock}
+\end{frame}
+
+\section{Frames}
+\begin{frame}[fragile]{Creating Frame}
+
+A presentation consists of a series of frames.
+
+\begin{exampleblock}{Code for creating a simple frame}
+\begin{verbatim}
+\begin{frame}[...]{Title}{Subtitle} ... 
+\end{ frame}
+\end{verbatim}
+\end{exampleblock}
+
+
+For Frame Options [ ] we can use the following commands to optimize our slide's :
+{\footnotesize 
+\begin{description}
+	\item[Plain]: no headlines, footlines, sidebars
+	\item [b, c or t]: to vertically align at bottom, center or top
+	\item [fragile]: if using macros (like verbatim) which change codes
+	\item [containsverbatim]: for using verbatim environment command.
+	\item [allowframebreaks] : for automatic split of frames if the contents
+	do not fit in a single slide.
+	\item [shrink]: for shrinking the contents to fit in a single slide. (shrink=0..100)
+	\item [Squeeze]: for squeezing all vertical space.
+	\item[label]: give frame a name for later reuse such as hyperlink.
+\end{description}}
+
+\end{frame}
+
+
+\section{Text Formatting}
+\begin{frame}[fragile]{Text Formatting} \vspace{-5pt}
+\begin{exampleblock}{Text commands:}
+We can use the same text commands and environments in Beamer that we use in {\LaTeX} to change the way your text is displayed.
+\end{exampleblock}
+\begin{columns}[t]
+{\small	\column{.45\textwidth}	
+	\begin{block}{Common Text Formatting Commands}
+		\begin{verbatim}
+		\emph{Sample Text}
+		\textbf{Sample Text}
+		\textit{Sample Text}
+		\textsl{Sample Text}
+		\alert{Sample Text}
+		\textrm{Sample Text}
+		\textsf{Sample Text}
+		\color{green} Sample Text
+		\structure{Sample Text}
+		\end{verbatim}	
+	\end{block}}
+	\column{.45\textwidth}
+	\begin{block}{Output Text's}
+		\emph{Sample Text}\\
+		\textbf{Sample Text}\\
+		\textit{Sample Text}\\
+		\textsl{Sample Text}\\
+		\alert{Sample Text}\\
+		\textrm{Sample Text}\\
+		\textsf{Sample Text}\\
+		\color{green} Sample Text\\
+		\structure{Sample Text}\\
+	\end{block}
+\end{columns}
+\end{frame}
+
+\section{Verbatim Text}
+\begin{frame}[fragile]{Verbatim Texts} 
+\vspace{-5pt}
+
+\begin{exampleblock}{Verbatim Text}
+It is often helpful to write code or formulas as \alert {verbatim} text, which shows the text exactly as you type it, without any LATEX formatting.
+\end{exampleblock}
+
+\begin{columns}[t]	
+\column{.45\textwidth}	
+\begin{block}{Verbatim Code}
+	
+\verb|\begin{verbatim}|
+
+Display this text as it is
+\verb|\end{verbatim}|
+
+\end{block}
+
+\column{.45\textwidth}
+\begin{block}{Verbatim Code Output}
+   \begin{verbatim}
+Display this text as it is
+   \end{verbatim}
+\end{block}
+
+\end{columns}
+
+{\footnotesize  \begin{alertblock}{NOTE:}
+ For the above method to work, the \verb|[fragile]| option must be added to the frame environment as follow:
+ \begin{center}
+ 	\verb|\begin{frame}[fragile]|
+ \end{center}
+\end{alertblock}}
+
+\end{frame}
+
+\section{Creating Block's}
+\begin{frame}[fragile,allowframebreaks]{Creating Block's} 
+\begin{block}{Blocks:}
+	Blocks can be used to separate a specific section of text or graphics
+	from the rest of the frame. There are different type of blocks available and each block has its own color scheme to keep your
+	work well organized.
+\end{block}
+
+{\footnotesize
+\begin{columns}[t]
+	\column{.45\textwidth}	
+	\begin{block}{Code for Generic Block:}
+		\begin{verbatim}
+		\begin{block}{Title here}
+		content...
+		\end{block}
+		\end{verbatim}	
+	\end{block}
+	\column{.45\textwidth}
+	\begin{block}{Title here}
+		content...
+	\end{block}
+\end{columns}
+
+\begin{columns}[t]
+	\column{.45\textwidth}	
+	\begin{block}{Code for Theorem Block:}
+		\begin{verbatim}
+		\begin{theorem}
+		content...
+		\end{theorem}
+		\end{verbatim}	
+	\end{block}
+	\column{.45\textwidth}
+		\begin{theorem}
+			$ x + y = y + x  $
+		\end{theorem}
+\end{columns}}
+
+\vspace{10pt}
+{\scriptsize 
+\begin{columns}[t]
+	\column{.45\textwidth}	
+	\begin{block}{Code for Proof Block:}
+		\begin{verbatim}
+		\begin{proof}
+		content...
+		\end{proof}
+		\end{verbatim}	
+	\end{block}
+	\column{.45\textwidth}
+\begin{proof}
+	$\omega +\phi = \epsilon $
+\end{proof}
+\end{columns}
+
+\begin{columns}[t]
+	\column{.45\textwidth}	
+	\begin{block}{Code for Corollary Block:}
+		\begin{verbatim}
+\begin{corollary}
+content...
+\end{corollary}
+		\end{verbatim}	
+	\end{block}
+	\column{.45\textwidth}
+     \begin{corollary}
+	$ x + y = y + x  $
+    \end{corollary}
+\end{columns}
+
+\begin{columns}[t]
+	\column{.45\textwidth}	
+	\begin{block}{Code for Definition Block:}
+		\begin{verbatim}
+\begin{definition}
+A prime number is a number 
+\end{definition}
+		\end{verbatim}	
+	\end{block}
+	\column{.45\textwidth}
+        \begin{definition}
+	    A prime number is a number 
+       \end{definition}
+\end{columns}}
+\vspace{14pt}
+
+\begin{columns}[t]
+	\column{.5\textwidth}	
+	\begin{block}{Code for Example Block:}
+		\begin{verbatim}
+		\begin{exampleblock}{Example}
+		content...
+		\end{exampleblock}
+		\end{verbatim}
+	\end{block}
+	\column{.45\textwidth}
+	\begin{exampleblock}{Example Block}
+		content...
+	\end{exampleblock}
+\end{columns}
+
+\begin{columns}[t]
+	\column{.5\textwidth}	
+	\begin{block}{Code for Alert Block:}
+		\begin{verbatim}
+		\begin{alertblock}{Alert}
+		content...
+		\end{alertblock}
+		\end{verbatim}
+	\end{block}
+	\column{.45\textwidth}
+	\begin{alertblock}{Alert Block}
+		content...
+	\end{alertblock}
+\end{columns}
+
+\end{frame}
+
+\section{Creating Beamer color box }
+
+\begin{frame}[fragile,allowframebreaks]{Creating Beamer Color Box} 
+
+You can create color box with \verb|\beamercolorbox| command. 
+
+{\scriptsize
+\begin{columns}[t]
+\column{.55\textwidth}	
+\begin{block}{Code for rectangular color box:}
+\begin{verbatim}
+\setbeamercolor{color}{fg=black,
+bg=green}
+\begin{beamercolorbox}[options]
+{beamer color}
+content...
+\end{beamercolorbox}
+\end{verbatim}
+\end{block}
+	
+\column{.45\textwidth} \vspace{12pt}
+\setbeamercolor{color}{fg=black,bg=green}	\begin{beamercolorbox} [sep=0.5em,wd=5cm, ht=0.5cm]{color}
+		contents...
+\end{beamercolorbox}
+\end{columns} }
+
+\vspace{5pt}
+
+The \verb|\beamerboxesrounded| command can be used to frame rounded box.
+
+{\scriptsize
+\begin{columns}[t]
+\column{.55\textwidth}	
+\begin{block}{Code for rounded color box:}
+\begin{verbatim}
+		\begin{beamerboxesrounded}
+		[options]{Titel here}
+		contents...
+		\end{beamerboxesrounded}
+		\end{verbatim}
+\end{block}
+\column{.45\textwidth} \vspace{12pt}
+\setbeamercolor{color}{fg=black,bg=green}
+\begin{beamerboxesrounded}[options]{Titel here}
+contents...
+\end{beamerboxesrounded}
+\end{columns} }
+
+The following [options] can be defined to optimize the color box:
+
+
+\begin{description}
+	\item[wd]: sets the width of the box.
+    \item[dp]: sets the depth of the box.
+	\item[ht]: sets the height of the box.
+	\item[left]: causes the text inside the box to be left aligned.
+	\item[right ]: causes the text inside the box to be right aligned.
+	\item[center]: centers the text inside the box.
+	\item[sep]: sets the extra space around the text.
+	\item[shadow]: [true or false] draws a shadow behind the box. Currently, this option only has an effect if used together with the rounded option.
+	\item[rounded]: [true or false] causes the borders of the box to be rounded off if there is a background installed. This command internally calls beamerboxesrounded.
+\end{description} 
+The above option can be combined to create a customized color box as follow: 
+\begin{block}{Code for color box with out header:}
+\begin{verbatim}
+\begin{beamercolorbox}[ht=0.5cm, wd=10cm,dp=0.5ex, sep=2ex, 
+center, shadow = true, rounded = true] {title in head/foot}
+\usebeamerfont{title in head/foot} \insertshorttitle
+\end{beamercolorbox}		
+\end{verbatim}
+\end{block}
+
+\vspace{10pt}
+\begin{beamercolorbox}[ht=1cm,wd=10cm, dp=0.8ex,sep=2ex, center, shadow = true, rounded = true]{title in head/foot} \usebeamerfont{title in head/foot} \insertshorttitle
+\end{beamercolorbox}
+	
+\vspace{95pt}
+
+The following code can be used to create rounded color box with the header:
+\begin{block}{Code for color box with out header:}
+\begin{verbatim}
+\setbeamercolor{upper}{fg=black,bg=blue!20}
+\setbeamercolor{lower}{fg=black,bg=green!80}
+\begin{beamerboxesrounded}[upper=upper,lower=lower,
+shadow=true]
+{Titel here}
+$A = B$.
+\end{beamerboxesrounded}	
+\end{verbatim}
+\end{block}
+
+\vspace{10pt}
+
+\setbeamercolor{upper}{fg=black,bg=blue!20}
+\setbeamercolor{lower}{fg=black,bg=green!0}
+\begin{beamerboxesrounded}[upper=upper,lower=lower,shadow=true]
+{Titel here}
+	$A = B$.
+\end{beamerboxesrounded}
+
+\end{frame}
+
+\section{Multiple Columns}
+\begin{frame}[fragile,allowframebreaks ]{Multiple Columns} 
+
+\begin{center}
+Let's create two columns of 5 cm width with the following code:
+\end{center} \vspace{-5pt}
+\begin{block}{Code for Multiple Column }
+\begin{verbatim}
+\begin{columns}
+  \begin{column}[t]{5cm}
+      content...
+  \end{column}
+  \begin{column}[t]{5cm}
+      content...
+  \end{column}	
+\end{columns}
+	\end{verbatim}
+\end{block}
+
+\begin{columns}
+\begin{column}[t]{5cm}
+content content content content content content content content content content content content 
+\end{column}
+\begin{column}[t]{5cm}
+content content content content content content content content content content content content 
+\end{column}
+\end{columns}
+
+\begin{center}
+	Let's create two columns with \verb|\textwidth| command:
+\end{center} \vspace{-5pt}
+
+\begin{block}{Code for Multiple Column }
+	\begin{verbatim}
+\begin{columns}
+ \column{0.5\textwidth}
+    contents
+ \column{0.5\textwidth}
+    contents
+\end{columns}
+	\end{verbatim}
+\end{block}
+
+\vspace{15pt}
+
+\begin{columns}
+\column{0.5\textwidth}
+content content content content content content content 
+content content content content content content content 
+
+\column{0.5\textwidth}
+content content content content content content content 
+content content content content content content content 
+
+\end{columns}
+
+\end{frame}
+
+\begin{frame}[containsverbatim]{ Fitting a continuous list in one slide} \vspace{-10pt}
+
+The following command can be used to show long list in one slide and we can use \alert{onslide} command to \textbf{highlight} each column at a time. \vspace{10pt}
+
+\begin{exampleblock}{Code for multiple column in one frame }
+	
+	
+	\begin{columns}
+		
+		\begin{column}[t]{3cm}
+			\begin{verbatim}
+			\begin{enumerate}
+			\begin{multicols}{3}
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$
+			\item $y = \sqrt{x}$
+			\onslide<2->{       
+			\end{verbatim}	
+		\end{column}
+		
+		\begin{column}[t]{3cm}
+			
+			\begin{verbatim}
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$
+			\item $y = \sqrt{x}$}
+			\end{verbatim}
+		\end{column}
+		
+		\begin{column}[t]{3cm}
+			
+			\begin{verbatim}
+			\onslide<3->{
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$}
+			\end{multicols}
+			\end{enumerate}
+			\end{verbatim}
+			
+		\end{column}
+		
+	\end{columns}
+	
+	
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}{Fitting a continuous list in one slide } 
+
+\hypertarget<1>{jumptofirst}{}
+\hypertarget<2>{jumptosecond}{}
+\hypertarget<3>{jumptothird}{}
+
+\begin{exampleblock}{List in multiple column's }
+\begin{enumerate}
+	\begin{multicols}{3}
+		\item $y = x$
+		\item $y = x$
+		\item $y = x$
+		\item $y = x$
+		\item $y = x$
+		\item $y = x$
+		\item $y = \sqrt{x}$
+		\onslide<2->{
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$
+			\item $y = \sqrt{x}$}
+		\onslide<3->{
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$
+			\item $y = x$}
+	\end{multicols}
+\end{enumerate}	
+	
+\end{exampleblock}
+\hyperlink{hyper1}{\beamerreturnbutton{Jump to hyperlink}}
+\end{frame}
+
+\section{Multiple Columns and Blocks}
+\begin{frame}[fragile]{Multiple Columns and Blocks}
+It's possible to create multiple columns and blocks in one slide. 
+\begin{exampleblock}{Code for Multiple Columns and Blocks}
+\begin{columns}
+\column{.45\textwidth} \begin{verbatim}
+\begin{block}{Header-1-}
+Content...
+\end{block}\end{verbatim}
+\column{.45\textwidth}\begin{verbatim}
+\begin{block}{Header-2-}
+Content...
+\end{block}\end{verbatim}
+\end{columns}
+\begin{columns}
+\column{.45\textwidth}\begin{verbatim}
+\begin{block}{Header-3-}
+Content...
+\end{block}\end{verbatim}
+\column{.45\textwidth}\begin{verbatim}
+\begin{block}{Header-4-}
+Content...
+\end{block}\end{verbatim}
+\end{columns}
+\end{exampleblock}
+
+\vspace{-15pt}
+
+\begin{columns}[t]
+\column{.45\textwidth}
+\begin{block}{Column 1 Header}
+Column 1 Body Text
+\end{block}
+\column{.45\textwidth}
+\begin{block}{Column 2 Header}
+Column 2 Body Text
+\end{block}
+\end{columns}\begin{columns}[t]
+\column{.45\textwidth}
+\begin{block}{Column 1 Header}
+Column 1 Body Text
+\end{block}
+\column{.45\textwidth}
+\begin{block}{Column 2 Header}
+Column 2 Body Text
+\end{block}
+\end{columns}
+
+\end{frame}
+
+\section{Text Border}
+\begin{frame}[fragile]{Text Border} \vspace{-20pt}
+
+Borders can also be used to add structure and organization to your presentation. Here are
+some examples:
+
+\begin{columns}[t]
+\column{.45\textwidth}
+	\begin{exampleblock}{Code for Text bordering }
+		\begin{verbatim}
+		\shadowbox{Sample Text}
+		\fbox{Sample Text}
+		\doublebox{Sample Text}
+		\ovalbox{Sample Text}
+		\Ovalbox{Sample Text}
+		\end{verbatim}
+		
+	\end{exampleblock}
+\column{.45\textwidth}
+	\begin{exampleblock}{Text Border}
+	\shadowbox{Sample Text}\\
+	\vspace{4pt}
+	\fbox{Sample Text}\\
+	\vspace{4pt}
+	\doublebox{Sample Text}\\
+	\vspace{4pt}
+	\ovalbox{Sample Text}\\
+	\vspace{4pt}
+	\Ovalbox{Sample Text}
+	\end{exampleblock}
+\end{columns}
+
+\end{frame}
+
+\section{Overlays}
+\begin{frame}[fragile]{Overlays} \vspace{-10pt}
+
+By showing each item incrementally instead of displaying every thing at once, we can get the attention of the audience on item we are talking about. The following command can make each item grow in each slide but in one frame. \vspace{5pt}
+
+\begin{exampleblock}{ Code for Overlays}
+\begin{verbatim}
+\begin{itemize}[<+->]
+\item a first item
+\item a second item
+\item a third item
+\item \dots
+\end{itemize}	
+\end{verbatim}	
+\end{exampleblock} \vspace{10pt}
+Observe the effect on the next slide...
+\end{frame}
+
+\begin{frame}{ Overlays -1-}
+\begin{exampleblock}{Example of Overlay}
+\begin{itemize}[<+->]
+\item a first item
+\item a second item
+\item a third item
+\item \dots
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[containsverbatim]{ Overlays -2-} 
+A more complicated overlay behavior is also possible such as to cover some items while some items are still displayed.
+{\footnotesize 
+\begin{exampleblock}{Code for specified overlay}
+	\begin{verbatim}
+	\begin{proof}
+	\begin{enumerate}
+	\item<1-> Suppose $p$ were the largest prime number.
+	\item<2-> Let $q$ be the product of the first $p$ numbers.
+	\item<3-> Then $q + 1$ is not divisible by any of them.
+	\item<1-> But $q + 1$ is greater than $1$, 
+	number not in the first $p$ numbers.\qedhere
+	\end{enumerate}
+	\end{proof}
+	\uncover<4->{The proof used \textit{reduction ad absurdum}.}
+	\end{verbatim}
+\end{exampleblock} }
+
+In the above code the first and fourth item are shown on the first slide of the frame, but the other two items are not shown. Rather, the second item is shown only from the second slide onward.
+  
+\end{frame}
+
+\begin{frame}{Overlays -2-}
+\begin{proof}
+	\begin{enumerate}
+		\item<1-> Suppose $p$ were the largest prime number.
+		\item<2-> Let $q$ be the product of the first $p$ numbers.
+		\item<3-> Then $q + 1$ is not divisible by any of them.
+		\item<1-> But $q + 1$ is greater than $1$, thus divisible by some prime
+		number not in the first $p$ numbers.\qedhere
+	\end{enumerate}
+\end{proof}
+\uncover<4->{The proof used \textit{reduction ad absurdum}.}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Overlays -3-} \vspace{-20pt}
+It's also possible to display list in random order. For example, see the following block of code:
+\begin{exampleblock}{ Code for random Overlays}
+	\begin{verbatim}
+	\item<1-> from first layer on
+	\item<2-> from second layer on
+	\item<4> only in the 4. layer
+	\item<3,5-> in the 3., 5. and all further layers
+	\end{verbatim}	
+\end{exampleblock} \vspace{10pt}
+Observe the effect on the next slide...
+\end{frame}
+
+\begin{frame}{Overlays -3-}\vspace{-80pt}
+\begin{exampleblock}{An example block}
+	\begin{itemize}
+		\item<1-> from first layer on
+		\item<2-> from second layer on
+		\item<4> only in the 4. layer
+		\item<3,5-> in the 3., 5. and all further layers
+	\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+
+\subsection{Pause}
+
+\begin{frame}[fragile]{Pause} \vspace{-20pt}
+
+\alert{\textbf{Pause}} is another option for displaying texts once at a time.   
+
+\begin{exampleblock}{Code for pause}
+	\begin{verbatim}
+\pause
+\begin{itemize}
+\item Hello, World!
+\pause
+\item Hello, Mars!
+\pause
+\item Hello, Alpha Centauri!
+\end{itemize}
+	\end{verbatim}	
+\end{exampleblock}
+\vspace{10pt}
+Observe the effect on the next slide...
+
+\end{frame}
+
+\begin{frame}{Pause} \vspace{-110pt}
+\pause
+\begin{itemize}
+	\item Hello, World!
+	\pause
+	\item Hello, Mars!
+	\pause
+	\item Hello, Alpha Centauri!
+\end{itemize}
+
+\end{frame}
+
+
+\subsection{Text Replacing}
+\begin{frame}[fragile]{Text Replacing} \vspace{-20pt}
+
+\begin{exampleblock}{Code for text replacing}
+	\begin{verbatim}
+	\begin{overlayarea}{\textwidth}{3em}
+	\only<1>{Some text for the first slide.\\
+	Possibly several lines long.}
+	\only<2>{Replacement on the second slide.}
+	\end{overlayarea}
+	\end{verbatim}	
+\end{exampleblock}
+
+\begin{block}{Text replacing}
+\begin{overlayarea}{\textwidth}{3em}
+\only<1>{Some text for the first slide.\\
+Possibly several lines long.}
+\only<2>{Replacement on the second slide.}
+\end{overlayarea}
+\end{block}
+\end{frame}
+
+\section{Transitions b/n Slides}
+
+\begin{frame}[fragile,shrink=12]{Slide Transition} \vspace{-3pt}
+There are several PDF transition supports such as : Blinds, Box, Dissolve, Glitter, Replace,
+Split, Wipe.
+ Here are some examples:
+\begin{exampleblock}{Slide Transition Commands}
+	\begin{verbatim}
+	\transblindshorizontal: Horizontal blinds pulled away
+	\transblindsvertical: Vertical blinds pulled away
+	\transboxin: Move to center from all sides
+	\transboxout: Move to all sides from center
+	\transdissolve: Slowly dissolve what was shown before
+	\transslipverticalin: Sweeps two vertical lines in
+	\transslipverticalout: Sweeps two vertical lines out
+	\transhorizontalin: Sweeps two horizontal lines in
+	\transhorizontalout: Sweeps two horizontal lines out
+	\end{verbatim}
+\end{exampleblock}
+
+The effect of few selected codes are shown in the next slides.
+ 
+\begin{exampleblock}{General format for slide transition}
+	\begin{verbatim}
+	\begin{itemize}
+	\transdissolve<1-2> 
+	\item<1-> Content 
+	\item<2-> Content 
+	\end{itemize}
+	\end{verbatim}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[c]{Transdissolve} \vspace{0pt}
+
+\begin{itemize}
+\transdissolve<1-3> 
+\item<1-> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam lobortis facilisis sem. Nullam nec mi et neque pharetra sollicitudin. Praesent imperdiet mi nec ante. Donec ullamcorper, felis non sodales commodo, lectus velit ultrices augue, a dignissim nibh lectus placerat pede.
+\item<2-> I Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam lobortis
+facilisis sem. Nullam nec mi et neque pharetra sollicitudin. Praesent
+imperdiet mi nec ante. Donec ullamcorper, felis non sodales commodo, lectus
+velit ultrices augue, a dignissim nibh lectus placerat pede.
+\item<3-> I Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam lobortis
+facilisis sem. Nullam nec mi et neque pharetra sollicitudin. Praesent
+imperdiet mi nec ante. Donec ullamcorper, felis non sodales commodo, lectus
+velit ultrices augue, a dignissim nibh lectus placerat pede.
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[c]{Transboxout} \vspace{0pt}
+
+\begin{itemize}
+	\transboxout<1-3> 
+	\item<1-> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam lobortis facilisis sem. Nullam nec mi et neque pharetra sollicitudin. Praesent imperdiet mi nec ante. Donec ullamcorper, felis non sodales commodo, lectus velit ultrices augue, a dignissim nibh lectus placerat pede.
+	\item<2-> I Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam lobortis
+	facilisis sem. Nullam nec mi et neque pharetra sollicitudin. Praesent
+	imperdiet mi nec ante. Donec ullamcorper, felis non sodales commodo, lectus
+	velit ultrices augue, a dignissim nibh lectus placerat pede.
+	\item<3-> I Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam lobortis
+	facilisis sem. Nullam nec mi et neque pharetra sollicitudin. Praesent
+	imperdiet mi nec ante. Donec ullamcorper, felis non sodales commodo, lectus
+	velit ultrices augue, a dignissim nibh lectus placerat pede.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[c]{Transblindsvertical} \vspace{0pt}
+
+\begin{itemize}
+	\transblindsvertical<1-3> 
+	\item<1-> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam lobortis facilisis sem. Nullam nec mi et neque pharetra sollicitudin. Praesent imperdiet mi nec ante. Donec ullamcorper, felis non sodales commodo, lectus velit ultrices augue, a dignissim nibh lectus placerat pede.
+	\item<2-> I Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam lobortis
+	facilisis sem. Nullam nec mi et neque pharetra sollicitudin. Praesent
+	imperdiet mi nec ante. Donec ullamcorper, felis non sodales commodo, lectus
+	velit ultrices augue, a dignissim nibh lectus placerat pede.
+	\item<3-> I Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam lobortis
+	facilisis sem. Nullam nec mi et neque pharetra sollicitudin. Praesent
+	imperdiet mi nec ante. Donec ullamcorper, felis non sodales commodo, lectus
+	velit ultrices augue, a dignissim nibh lectus placerat pede.
+\end{itemize}
+
+\end{frame}
+
+\section{Multimedia}
+
+\begin{frame}[fragile, shrink = 5]{Multimedia} \vspace{0pt}
+
+To play video on the Beamer Presentation  with internal viewer we can use the following code:
+
+\begin{exampleblock}{Multimedia with internal viewer}
+\begin{verbatim}
+\movie[width=2cm, height=2cm, loop, showcontrols,
+start=5s, poster]{}{videoplayback.mp4}
+\end{verbatim}	
+\end{exampleblock}
+
+\movie[width=4cm, height=2cm, loop, showcontrols,
+start=5s, poster]{}{videoplayback.mp4}
+
+To play video on the Beamer Presentation with external viewer we can use the following code:
+
+\begin{exampleblock}{Multimedia with external viewer (Video)}
+	\begin{verbatim}
+	\movie[externalviewer]
+	{\beamergotobutton{Start the movie}}{videoplayback.mp4}
+	\end{verbatim}	
+\end{exampleblock}
+
+\movie[externalviewer]
+{\beamergotobutton{Start the movie}}{videoplayback.mp4}
+
+It's also possible to play audio with same commands:
+
+\begin{exampleblock}{Multimedia with external viewer (Audio)}
+	\begin{verbatim}
+\movie[externalviewer]
+{\beamergotobutton{Start the audio}}{Eyob.mp3}
+	\end{verbatim}	
+\end{exampleblock}
+
+\movie[externalviewer]
+{\beamergotobutton{Start the audio}}{Eyob.mp3}
+\end{frame}
+
+\section{List}
+\begin{frame}[fragile,allowframebreaks]{List}
+The following code shows how to create a numbered lists:
+
+\vspace{-10pt}
+\begin{columns}[t]
+\column{.55\textwidth}
+
+\begin{exampleblock}{Code for numbered list}
+	\begin{verbatim}
+	\begin{enumerate}
+	\item This is item number one
+	\item This is item number two
+	\end{enumerate}
+	\end{verbatim}
+\end{exampleblock}
+
+\column{.45\textwidth}
+
+\begin{exampleblock}{Numbered list}
+	\begin{enumerate}
+		\item This is item number one
+		\item This is item number two
+	\end{enumerate}
+\end{exampleblock}
+\end{columns} \vspace{10pt}
+
+The following code shows how to create an  itemized list:
+\vspace{-10pt}
+\begin{columns}[t]
+	\column{.45\textwidth}
+	
+	\begin{exampleblock}{Code for itemized list}
+		\begin{verbatim}
+\item list one 
+\item list two 
+\item list three 
+		\end{verbatim}
+	\end{exampleblock}
+	
+	\column{.45\textwidth}
+	
+	\begin{exampleblock}{Itemized list}
+		 \begin{itemize}
+			\item list one 
+			\item list two 
+			\item list three 
+		\end{itemize}
+	\end{exampleblock}
+\end{columns}
+
+\vspace{8pt}
+It's also possible to combine both numbered and itemized list: 
+
+{\footnotesize 
+\begin{columns}[t]
+	\column{.45\textwidth}
+	\begin{exampleblock}{Code for both numbered and itemized list }
+		\begin{verbatim}
+\begin{enumerate}
+   \item list one 
+      \begin{itemize}
+          \item list one 
+          \item list two 
+          \item list three 
+       \end{itemize}      
+\item list two 
+  \begin{itemize}
+          \item list one 
+          \item list two 
+          \item list three 
+   \end{itemize}
+\end{enumerate}
+		\end{verbatim}
+	\end{exampleblock}
+	
+	\column{.45\textwidth}
+	
+	\begin{exampleblock}{Numbered and Itemized list }
+		
+		\begin{enumerate}
+			\item list one 
+			
+			\begin{itemize}
+				\item list one 
+				\item list two 
+				\item list three 
+			\end{itemize}
+			\item list two 
+			\begin{itemize}
+				\item list one 
+				\item list two 
+				\item list three 
+			\end{itemize}
+		\end{enumerate}
+		
+	\end{exampleblock}
+\end{columns}
+
+}
+\end{frame}
+
+\section{Hyperlinks}
+\begin{frame}[fragile]{Hyperlinks} \vspace{-10pt} \label{hyper1}
+
+{\footnotesize 
+\begin{exampleblock}{Hyperlink}
+Hyperlink: is a text when you click on it, jumps the presentation to some other slide.Creating such a button is a three-step process:
+\begin{enumerate}
+    \item You specify a target using the command \alert{hypertarget} or the command \alert{label}.
+    \item You render the button using \alert{beamerbutton} or a similar command.
+    \item You put the button inside a \alert{hyperlink} command. Now clicking it will jump to the target of the link.
+\end{enumerate} 
+\end{exampleblock}
+
+\begin{exampleblock}{ Code for Hyperlink}
+	\begin{verbatim}	
+\hyperlink{intro}{\beamerbutton{Jump to Inroduction}}
+\hyperlink{jumptofirst}{\beamergotobutton{Go to -p1-}}
+\hyperlink{jumptosecond}{\beamerskipbutton{Go to -p2-}}
+\hyperlink{jumptothird}{\beamerreturnbutton{Go to -p3-}}
+	\end{verbatim}
+\end{exampleblock}
+
+}
+
+\hyperlink{intro}{\beamerbutton{Jump to Inroduction}}
+\hyperlink{jumptofirst}{\beamergotobutton{Mutiple Column  -p1-}}
+\hyperlink{jumptosecond}{\beamerskipbutton{Mutiple Column -p2-}}
+\hyperlink{jumptothird}{\beamerreturnbutton{Mutiple Column -p3-}}
+
+\end{frame}
+
+\section{Linking to Web Addresses}
+\begin{frame}[fragile]{Linking to web Addresses} 
+
+\begin{exampleblock}{Link to web/e-mail address}
+	
+Links to web address or e-mail address can be added in two ways:
+\begin{itemize}
+		\item \verb|\url| command display the actual link to the web site 
+		
+		\item \verb|\href| command displays word/sentence to a hidden link  	
+\end{itemize}
+\end{exampleblock}
+
+\begin{exampleblock}{Code for Link to web/e-mail address}
+\begin{verbatim}
+	\href{http://www.sharelatex.com}
+	{Click here to go to the link}
+	\url{http://www.sharelatex.com}
+\end{verbatim}
+\end{exampleblock}
+
+For further references \href{http://www.sharelatex.com}    {\alert{Click here to go to the link}}
+
+\vspace{5pt}
+
+Go to the next Url:
+\alert{\url{http://www.sharelatex.com}}
+\end{frame}
+
+\section{Link to local file}
+\begin{frame}[fragile]{Link to local file} 
+
+The commands \verb|\href|  and \verb|\url| presented in the previous section can be used to open local files. It's possible to open files such as PDF,text file, and images while you are on the presentation.
+
+\begin{exampleblock}{Code for linking local file}
+\begin{verbatim}
+\href{run:/home/yoni/Documents/Latex/manual.pdf}{Manual.pdf}
+\href{run:/home/yoni/Documents/Latex/CDO.txt}{CDO.txt} 
+\href{run:/home/yoni/Documents/Latex/EIWR.png}{EIWR.png}
+\end{verbatim}
+\end{exampleblock}
+
+\begin{exampleblock}{Opening local files}
+ \href{run:/home/yoni/Documents/Latex/manual.pdf}{Manual.pdf}\\
+\href{run:/home/yoni/Documents/Latex/CDO.txt}{CDO.txt} \\
+\href{run:/home/yoni/Documents/Latex/EIWR.png}{EIWR.png} \\
+\end{exampleblock}
+\end{frame}
+
+\section{Figure}
+\begin{frame}[fragile]{Figures with caption}
+
+ For instance, you can use the following command to add figures and captions below and above the figure.
+
+{\footnotesize 
+\begin{exampleblock}{Code for adding figure with caption}
+	\begin{verbatim}
+	\begin{figure}
+	\pgfuseimage{myimage}
+	\caption{This caption is placed below the figure.}
+	\end{figure}
+	
+	\begin{figure}
+	\caption{This caption is placed above the figure.}
+	\pgfuseimage{myimage}
+	\end{figure}
+	\end{verbatim}
+\end{exampleblock}
+}
+
+Here we can use either \verb|\includegraphics |,\verb|\pgfimage|, and \verb|\pdfuseimage| to add the images. The effect of the above code are shown in the next slide.  
+\end{frame}
+
+\begin{frame}[fragile]{Figures with caption} \vspace{-6pt}
+
+\begin{figure}
+	\pgfuseimage{myimage}
+	\caption{This caption is placed below the figure.}
+\end{figure}
+\begin{figure}
+	\caption{This caption is placed above the figure.}
+	\pgfuseimage{myimage}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}[fragile]{Adding figures at desired locations } 
+
+It's possible to locate figure at desired location by using the following code. For this code to work the pgf packages must be installed.
+
+{\footnotesize 
+\begin{exampleblock}{Code for locating images at desired location}
+\begin{verbatim}
+\pgfputat{\pgfxy(0,-1.5)}{\pgfbox[left,base]
+{\pgfimage[width=2cm]{EIWR.png}}}
+
+\pgfputat{\pgfxy(5,-1.5)}{\pgfbox[left,base]
+{\pgfimage[width=2cm]{EIWR.png}}}
+
+\pgfputat{\pgfxy(10,-1.5)}{\pgfbox[left,base]
+{\pgfimage[width=2cm]{EIWR.png}}}	
+\end{verbatim}
+\end{exampleblock}}
+
+For simplicity, if you use the same figure several times, use \verb| \pgfdecalreimage|  and \verb|\pgfuseimage|. 
+To avoid calling the image several times.
+
+\end{frame}
+
+\begin{frame}{Adding figures at desired locations }
+
+\pgfputat{\pgfxy(0,-1.5)}{\pgfbox[left,base]{\pgfimage[width=2cm]{EIWR.png}}}
+
+\pgfputat{\pgfxy(5,-1.5)}{\pgfbox[left,base]{\pgfimage[width=2cm]{EIWR.png}}}
+
+\pgfputat{\pgfxy(9,-1.5)}{\pgfbox[left,base]{\pgfimage[width=2cm]{EIWR.png}}}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Figures inside Column}
+
+It's also possible to place figures inside columns at desired location. 
+
+\begin{exampleblock}{Code for placing figures in side column}
+	
+\begin{verbatim}
+\begin{columns}
+\begin{column}{0.6\textwidth}
+	Content Content Content Content Content Content 
+	\end{column}
+	
+	\begin{column}{0.4\textwidth}
+	\pgfputat{\pgfxy(0,2)}{\pgfbox[left,top]
+	{\includegraphics[width=\textwidth]{EIWR.png}}}
+	\end{column}	
+\end{columns}	
+\end{verbatim}
+	
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Figures inside Column}
+
+\begin{columns}
+	
+	\begin{column}{0.6\textwidth}
+		
+	Content Content Content Content Content Content Content Content
+	Content Content Content Content Content Content Content Content Content Content Content Content
+	Content Content Content Content Content Content Content Content Content Content Content Content
+
+	\end{column}
+
+	\begin{column}{0.4\textwidth}
+		\pgfputat{\pgfxy(0,2)}{\pgfbox[left,top]{\includegraphics[width=\textwidth]{EIWR.png}}}
+	\end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}[fragile]{Zooming Figures} 
+
+Figures can be zoomed using the following code:\\
+where: 
+(x,y) : Upper left coordinate point\\
+\hspace{32pt}(w,h) : Width and height for zooming
+\begin{exampleblock}{Code for Zooming Figures}
+	\begin{verbatim}
+		
+\framezoom<1><2>[border](x,y)(w,h)
+	
+\framezoom<1><2>[border](2.4cm,1.9cm)(2cm,2cm)
+\framezoom<1><3>[border](4cm,3.9cm)(2cm,2cm)
+
+\pgfimage[height=6cm]{EIWR.png}
+	
+	\end{verbatim}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}{Zooming Figures}
+
+\framezoom<1><2>[border](2.4cm,1.9cm)(2cm,2cm)
+\framezoom<1><3>[border](4cm,3.9cm)(2cm,2cm)
+
+\pgfimage[height=6cm]{EIWR.png}
+\end{frame}
+
+\section{Quotations, Quotes, Verse}
+\begin{frame}[fragile,allowframebreaks]{Quotations, Quotes, Verse}  
+
+\alert{Quotation}: It can be used for longer quotations of more than one paragraph, because it indents the first line of each paragraph. 
+
+{\footnotesize 
+\begin{exampleblock}{Code for Quotation's}	
+\begin{verbatim}
+\begin{quotation}
+Content here...
+\par 	\rightline{Source: \emph{Source here}} 
+\end{quotation}
+\end{verbatim}
+\end{exampleblock}
+
+\begin{exampleblock}{Example  of Quotation's}
+		
+\begin{quotation}	
+Warming of the climate system is unequivocal, and since the 1950s, many of the observed changes are unprecedented over decades to millennia.
+
+The atmosphere and ocean have warmed, the amounts of snow and ice have diminished, sea level has risen, and the concentrations of greenhouse gases have increased.
+	\par 	\rightline{Source: \emph{IPCC-WG1-AR5 SPM}} 
+	\end{quotation}
+\end{exampleblock}
+}
+
+The \alert{quote}  tool can be used for short quotations:
+
+\begin{exampleblock}{Code for Quote}	
+\begin{verbatim}
+\begin{quote}
+Content here... 
+\par 	\rightline{written by: \emph{Author name}} 
+\end{quote}
+\end{verbatim}
+\end{exampleblock}
+
+\begin{exampleblock}{Example of Quote}	
+	\begin{quote}
+There is, today, always a risk that specialists in two subjects, using languages full of words that are unintelligible without study, will grow up not only, without
+knowledge of each other’s work, but also will ignore the
+problems which require mutual assistance.
+		\par 	\rightline{written by \emph{Gilbert Walker}} 
+	\end{quote}
+\end{exampleblock}
+
+\vspace{10pt}
+The \alert{verse}  tool can be used to compose a small piece poetry.
+
+\begin{exampleblock}{Code for Verse}	
+\begin{verbatim}
+\begin{verse}
+Content here...
+\end{verse}
+\par 	\rightline{written by:\emph{Author name}} 
+\end{verbatim}
+\end{exampleblock}
+
+\begin{exampleblock}{Verse}	
+	\begin{verse}
+No milk today, my love has gone away\\
+The bottle stands for lorn, a symbol of the dawn\\
+No milk today, it seems a common sight\\
+But people passing by don't know the reason why
+\par 	\rightline{written by: \emph{Graham Gouldman}}  
+	\end{verse}
+\end{exampleblock}
+
+\end{frame}
+
+\section{Adding Notes}
+
+\begin{frame}[fragile]{Adding Notes} 
+
+A note is text that is intended as a reminder to yourself of what you should say or should keep in mind when presenting a slide. To add a note to a slide or a frame, use the \verb|\note |command. \vspace{5pt}
+
+The following example will produce one note page that follows the second slide and has two entries.
+
+\begin{exampleblock}{Code for Notes}
+	\begin{verbatim}
+\item<1-> Eggs
+\item<2-> Plants
+\note[item]<2>{Tell joke about plants.}
+\note[item]<2>{Make it short.}
+\item<3-> Animals
+	\end{verbatim}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}{Adding Notes}
+    \begin{itemize}
+      \item<1-> Eggs
+      \item<2-> Plants
+      \note[item]<2>{Tell joke about plants.}
+      \note[item]<2>{Make it short.}
+      \item<3-> Animals
+\end{itemize}
+\end{frame}
+
+
+\section{Bibliography}
+\begin{frame}[fragile, allowframebreaks]{Bibliography} \vspace{-5pt}
+
+\emph{Bibliography} : To present a bibliography at the end of your talk, so that people can see what kind of “further reading” is possible. You can use the \alert{bibliography environment} and the \verb|\cite| commands of \alert{{\LaTeX}} in a beamer presentation.
+
+\begin{exampleblock}{Code for Bibliography}
+	\begin{verbatim}
+\begin{thebibliography}{10}
+\bibitem[Autour, Year]{code for citing}
+Given name(In short).~Sure name.
+\newblock Titel of Jornal, Aricle or Book.
+\newblock {\em Name of the Jornal, Volume(Number):
+page number as [223--233],Year.
+\end{thebibliography}
+	\end{verbatim}
+\end{exampleblock}
+
+To cite, simply use the \verb|\cite| command inside the presentation with the code name for citing.
+
+\begin{exampleblock}{Code for citing}
+	\begin{verbatim}
+This is how to cite inside the document	\cite{code for citing}.
+	\end{verbatim}
+\end{exampleblock}
+
+\vspace{100pt}
+
+As an example see the following code and its effect on the next slide.
+
+\begin{exampleblock}{Code for Bibliography}
+	\begin{verbatim}
+\beamertemplatearticlebibitems
+\bibitem[Dijkstra, 1982]{Dijkstra1982}
+E.~Dijkstra.
+\newblock Smoothsort, an alternative for sorting in situ.
+\newblock {\em Science of Computer Programming},
+1(3):223--233,1982.
+	\end{verbatim}
+\end{exampleblock} \vspace{10pt}
+
+The predefined templates, such as [book,article and text] can be used in the \verb|beamertemplatebibitems| as desired by the user. 
+\end{frame}
+
+\begin{frame}{References}
+\begin{thebibliography}{12}
+	
+	\beamertemplatearticlebibitems
+    \bibitem[Dijkstra, 1982]{Dijkstra1982}
+    E.~Dijkstra.
+    \newblock Smoothsort, an alternative for sorting in situ.
+    \newblock {\em Science of Computer Programming}, 1(3):223--233, 1982.
+	
+	\beamertemplatebookbibitems
+	\bibitem[Dijkstra, 1982]{Dijkstra1982}
+	E.~Dijkstra.
+	\newblock Smoothsort, an alternative for sorting in situ.
+	\newblock {\em Science of Computer Programming}, 1(3):223--233, 1982.
+	
+	\beamertemplatetextbibitems
+	\bibitem[Dijkstra, 1982]{Dijkstra1982}
+	E.~Dijkstra.
+	\newblock Smoothsort, an alternative for sorting in situ.
+	\newblock {\em Science of Computer Programming}, 1(3):223--233, 1982.
+\end{thebibliography} \vspace{10pt}
+
+\begin{block}{Citing Example}
+This is how to cite inside the document \cite{Dijkstra1982}.
+\end{block}
+
+\end{frame}
+
+\section{Further Reading on Beamer}
+
+\begin{frame}{Further Reading on Beamer}
+
+\begin{thebibliography}{12}	
+       \bibitem[Tantau,2018]{Tantau2018}
+        T.~Tantau, J.~Wright, V.Miletić
+        \newblock The BEAMER class
+        \newblock {\em User Guide for version 3.54},(1),2018.
+        \url{https://github.com/josephwright/beamer}
+        
+        \bibitem
+        \newblook The Beamer User Guide: \alert{\url{http://www.ctan.org/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf}}
+        
+  
+        \bibitem 
+        \newblook The Beamer Homepage: \alert{\url{http://latex-beamer.sourceforge.net}}
+        
+        \bibitem
+        \newblook Beamer v3.0 Guide, 2004
+\end{thebibliography}
+
+\end{frame}
+
+\end{document}
