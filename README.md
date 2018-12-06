@@ -6,4 +6,4 @@ This is a step by step BEAMER Presentation tutorial . It includes:
 
  * the latex [Beamer_Presentation_Mannual.tex] file so that you can able to access or edit the source code which is used to create this beamer presentation. 
 
-There are also generated files of latex named [.gitignore].
+There is also generated files of latex named [.gitignore].
